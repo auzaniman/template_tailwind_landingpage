@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .gradient {
+      background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+    }
+
+    .gradient2 {
+      background-color: #f39f86;
+      background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+    }
+  </style>
+
+  <title>Templating Tailwind 01</title>
+</head>
+
+<body class="text-gray-800 antialiased">
+  <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <div class="w-full relative flex ml-auto sm:ml-28 justify-between lg:w-auto lg:static lg:block lg:justify-start">
+        <a class="text-xl font-semibold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-gray-200"
+          href="#">
+          Landing Page Jogja
+        </a>
+        <button
+          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          type="button" onclick="toggleNavbar('example-collapse-navbar')">
+          <i class="text-white fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="lg:flex flex-grow items-center lg:bg-transparent lg:shadow-none hidden" id="example-collapse-navbar">
+        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto lg:mr-28">
+          <li class="flex items-center">
+            <a href="#price" style="text-decoration: none;" class="js-scroll-trigger ml-auto">
+              <button
+                class="gradient2 font-bold hover:underline transition duration-150 cursor-pointer py-2 px-6 rounded">
+                Pesan langsung
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Banner -->
+    <div class="relative pt-16 sm:pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+      <div class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image:
+        url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+      </div>
+      <div class="container relative mx-auto">
+        <div class="items-center flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+            <div>
+              <h1 class="text-white lg:text-6xl text-5xl">
+                Your <strong>Landing Page</strong> starts with us.
+              </h1>
+              <p class="mt-6 text-2xl text-gray-300">
+                This is a <strong>simple of a Landing Page</strong> you can have. It features
+                multiple CSS components based on the <strong>Tailwindcss</strong> design system.
+              </p>
+
+              <a href="#deskripsi" style="text-decoration: none;" class="js-scroll-trigger">
+                <button
+                  class="gradient2 text-xl font-bold hover:underline transition duration-150 cursor-pointer py-2 px-8 rounded mt-16">
+                  Start Now
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured -->
+    <section class="relative py-15">
+      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0px);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto lg:pt-4 lg:pb-24 pb-20">
+        <div class="flex flex-wrap mt-12 justify-center">
+          <div class="w-full lg:w-3/12 px-4 text-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <i class="fas fa-medal text-xl"></i>
+            </div>
+            <h6 class="text-xl mt-5 font-bold">
+              Excelent Services
+            </h6>
+            <p class="mt-2 mb-4 text-gray-600 text-lg">
+              Kami melayani sepenuh hati
+            </p>
+          </div>
+          <div class="w-full lg:w-3/12 px-4 text-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <i class="fas fa-poll text-xl"></i>
+            </div>
+            <h5 class="text-xl mt-5 font-bold">
+              Grow your market
+            </h5>
+            <p class="mt-2 mb-4 text-gray-600 text-lg">
+              Design yang menarik, menambah daya tari pengunjung ke Landing Page Anda
+            </p>
+          </div>
+          <div class="w-full lg:w-3/12 px-4 text-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <i class="fas fa-lightbulb text-xl"></i>
+            </div>
+            <h5 class="text-xl mt-5 font-bold">Tailwind Design</h5>
+            <p class="mt-2 mb-4 text-lg text-gray-600">
+              Simple, Elegant, Modern design bt Tailwind CSS
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        style="height: 70px; transform: translateZ(0px);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Info Box & Deskripsi -->
+    <section class="pb-20 bg-gray-300 -mt-32" id="deskripsi">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center mt-32">
+          <div class=" w-full md:w-5/12 px-4 mt-16 mr-auto ml-auto" ">
+            <div
+              class=" text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg
+            rounded-full bg-gray-100">
+            <i class="fas fa-user-friends text-xl"></i>
+          </div>
+          <h3 class="text-3xl mb-2 font-semibold leading-normal">
+            Working with us is a pleasure
+          </h3>
+          <p class="text-xl font-light leading-relaxed mt-4 mb-4 text-gray-700">
+            Berbasis HTML, CSS dan Javascript. Kami menyediakan berbagai cara untuk membuat Landing Page anda lebih
+            Powerful dan Interaktif
+          </p>
+          <p class="text-xl font-light leading-relaxed mt-0 mb-4 text-gray-700">
+            Design Tailwind yang modern membuat Landing Page anda semakin menarik pelanggan
+          </p>
+          <a href="#price" class="font-bold text-gray-800 mt-8">Check Price !</a>
+        </div>
+        <div class="w-full md:w-4/12 px-4 mr-auto ml-auto mt-16">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+            <img alt="..."
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
+              class="w-full align-middle rounded-t-lg" />
+            <blockquote class="relative p-8 mb-4">
+              <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
+                class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                <polygon points="-30,95 583,95 583,65" class="text-pink-600 fill-current"></polygon>
+              </svg>
+              <h4 class="text-xl font-semibold text-white">
+                Top Services
+              </h4>
+              <ul class="text-lg mt-2 text-white">
+                <li>- Free Revisions !</li>
+                <li>- Konsultasi</li>
+                <li>- Memilih Template Design yang Anda suka</li>
+              </ul>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="pt-24 sm:pb-32 pb-10">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center text-center mb-14">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold">Here are our Testimonial</h2>
+            <p class="text-lg leading-relaxed m-4 text-gray-600">
+              Kata Mereka Tentang Landing Page Kami
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+            <div class="px-6">
+              <img alt="..." src="../assets/img/team-1-800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">Ryan Tompson</h5>
+                <p class="mt-2 text-gray-600">"Modern Design Premium dan sangat menarik banyak pelanggan saya"</p>
+                <p class="mt-3 text-sm text-gray-500 uppercase font-bold">
+                  Web Developer
+                </p>
+                <div class="mt-6">
+                  <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-twitter"></i></button><button
+                    class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-facebook-f"></i></button><button
+                    class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-dribbble"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+            <div class="px-6">
+              <img alt="..." src="../assets/img/team-2-800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">Romina Hadid</h5>
+                <p class="mt-2 text-gray-600">"Modern Design Premium dan sangat menarik banyak pelanggan saya"</p>
+                <p class="mt-3 text-sm text-gray-500 uppercase font-bold">
+                  Marketing Specialist
+                </p>
+                <div class="mt-6">
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-google"></i></button><button
+                    class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+            <div class="px-6">
+              <img alt="..." src="../assets/img/team-3-800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">Alexa Smith</h5>
+                <p class="mt-2 text-gray-600">"Modern Design Premium dan sangat menarik banyak pelanggan saya"</p>
+                <p class="mt-3 text-sm text-gray-500 uppercase font-bold">
+                  UI/UX DESIGNER
+                </p>
+                <div class="mt-6">
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-google"></i></button><button
+                    class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-twitter"></i></button><button
+                    class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-instagram"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+            <div class="px-6">
+              <img alt="..." src="../assets/img/team-4-470x470.png" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">Jenna Kardi</h5>
+                <p class="mt-2 text-gray-600">"Modern Design Premium dan sangat menarik banyak pelanggan saya"</p>
+                <p class="mt-3 text-sm text-gray-500 uppercase font-bold">
+                  Founder and CEO
+                </p>
+                <div class="mt-6">
+                  <button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-dribbble"></i></button><button
+                    class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-google"></i></button><button
+                    class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-twitter"></i></button><button
+                    class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fab fa-instagram"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pb-12 relative block bg-gray-900">
+      <div class="container mx-auto px-2 pt-10 pb-12 text-gray-800" id="price">
+        <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-white">
+          Pricing
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center pt-12 -my-4 sm:my-4">
+          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded lg:rounded-l-lg bg-white mt-4">
+            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow-inner">
+              <div class="p-8 text-3xl font-bold text-center border-b-4">
+                Basic
+              </div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+              </ul>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow pb-12 shadow-inner">
+              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+                Rp. 500.000
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 gradient shadow hover:shadow-lg z-10">
+            <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
+              <div class="w-full p-8 text-3xl font-bold text-center">Masterpiece</div>
+              <ul class="w-full text-center text-base font-bold">
+                <li class="py-4">Thing</li>
+                <li class="py-4">Thing</li>
+                <li class="py-4">Thing</li>
+                <li class="py-4">Thing</li>
+                <li class="py-4">Thing</li>
+              </ul>
+            </div>
+            <div class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden pb-12 shadow-inner">
+              <div class="w-full pt-6 text-4xl font-bold text-center">
+                Rp. 1.500.000
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded lg:rounded-l-lg bg-white mt-4">
+            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+              <div class="p-8 text-3xl font-bold text-center border-b-4">
+                Pro
+              </div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+                <li class="border-b py-4">Thing</li>
+              </ul>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-inner pb-12">
+              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+                Rp. 1.000.000
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gradient w-full mx-auto text-center pt-6 pb-12">
+      <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-white">
+        Miliki Landing Page Anda <br>
+        Sekarang Juga !
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+
+      <button
+        class="gradient2 mx-auto lg:mx-0 hover:underline bg-white text-xl text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg">
+        Pesan Sekarang !
+      </button>
+    </section>
+  </main>
+
+  <footer class="relative bg-gray-300 pt-8 pb-6">
+    <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+      style="height: 80px; transform: translateZ(0px);">
+      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+        version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+        <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4">
+          <h4 class="text-3xl font-semibold">Hubungi Kami</h4>
+          <h5 class="text-lg mt-0 mb-2 text-gray-700">
+            Temukan kami dari berbagai platform, kami respon 1-2 hari kerja.
+          </h5>
+          <div class="mt-6">
+            <button
+              class="gradient2 bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+              type="button">
+              <i class="flex fab fa-facebook-square"></i></button><button class="gradient2 bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center
+              align-center rounded-full outline-none focus:outline-none mr-2 p-3" type="button">
+              <i class="flex fab fa-github"></i>
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 sm:px-4 px-0 sm:py-0 py-4">
+          <div class="flex flex-wrap items-top mb-6">
+            <div class="w-full lg:w-4/12 px-4 ml-auto">
+            </div>
+            <div class="w-full lg:w-4/12 px-4">
+              <span class="block uppercase text-gray-600 text-lg sm:text-2xl font-bold mb-2">Link</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 sm:text-xl" href="#">Facebook</a>
+                </li>
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 sm:text-xl" href="#">Github</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="sm:my-6 my-1 border-gray-400" />
+      <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-sm text-gray-600 font-semibold py-1">
+            Copyright © 2019 Tailwind Starter Kit by
+            <a href="https://www.creative-tim.com" class="text-gray-600 hover:text-gray-900">Creative Tim</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+    (function ($) {
+      "use strict"; // Start of use strict
+
+      // Closes the sidebar menu
+      $(".menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
+        $(this).toggleClass("active");
+      });
+
+      // Smooth scrolling using jQuery easing
+      $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this
+          .hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, "easeInOutExpo");
+            return false;
+          }
+        }
+      });
+
+      // Closes responsive menu when a scroll trigger link is clicked
+      $('#sidebar-wrapper .js-scroll-trigger').click(function () {
+        $("#sidebar-wrapper").removeClass("active");
+        $(".menu-toggle").removeClass("active");
+        $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
+      });
+
+      // Scroll to top button appear
+      $(document).scroll(function () {
+        var scrollDistance = $(this).scrollTop();
+        if (scrollDistance > 100) {
+          $('.scroll-to-top').fadeIn();
+        } else {
+          $('.scroll-to-top').fadeOut();
+        }
+      });
+
+    })(jQuery); // End of use strict
+
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+</body>
+
+</html>
